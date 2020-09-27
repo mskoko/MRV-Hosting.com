@@ -33,7 +33,6 @@ Reload privilege tables now? [Y/n] Y
 Thanks for using MariaDB!
 ``
 
-
 ### How to Install Firewalld on Ubuntu 18.04 / Ubuntu 16.04 ###
 ``
 sudo apt-get install firewalld
@@ -87,7 +86,7 @@ FLUSH PRIVILEGES;
 ``
 REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'breakUser'@'%';
 ``
-# Remove User
+### Remove User
 ``
 DROP USER 'breakUser'@'%';
 ``
@@ -96,7 +95,7 @@ OR
 DROP USER breakUser;
 DROP USER IF EXISTS breakUser;
 ``
-# Remove DataBase
+### Remove DataBase
 ``
 DROP DATABASE breakDB;
 ``
