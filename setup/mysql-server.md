@@ -65,14 +65,14 @@ SELECT User, Host FROM mysql.user;
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
 ``
 
-# Privilegija GRANT OPTION omogućuje vam davanje drugih korisnika ili uklanjanje privilegija koje sami posjedujete od drugih korisnika.
+Privilegija GRANT OPTION omogućuje vam davanje drugih korisnika ili uklanjanje privilegija koje sami posjedujete od drugih korisnika.
 ``
 GRANT ALL PRIVILEGES ON $dbName.* TO '$dbUser'@'%' WITH GRANT OPTION;
 ``
 
 ### Create new MySQL DataBase & User ###
 
-# Create DataBase
+[Create DataBase]
 ``
 CREATE DATABASE breakDB;
 ``
