@@ -83,7 +83,6 @@ GRANT ALL PRIVILEGES ON breakDB.* TO 'breakUser'@'%';
 FLUSH PRIVILEGES;
 ``
 
-
 ### Delete MySQL User & DataBase ###
 ``
 REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'breakUser'@'%';
@@ -92,7 +91,7 @@ REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'breakUser'@'%';
 ``
 DROP USER 'breakUser'@'%';
 ``
-# OR
+OR
 ``
 DROP USER breakUser;
 DROP USER IF EXISTS breakUser;
