@@ -75,7 +75,7 @@ GRANT ALL PRIVILEGES ON $dbName.* TO '$dbUser'@'%' WITH GRANT OPTION;
 ``
 CREATE DATABASE breakDB;
 ``
-# Create User
+### Create User
 ``
 CREATE USER 'breakUser'@'%' IDENTIFIED BY 'breakPW';
 GRANT ALL PRIVILEGES ON breakDB.* TO 'breakUser'@'%';
