@@ -72,7 +72,7 @@ GRANT ALL PRIVILEGES ON $dbName.* TO '$dbUser'@'%' WITH GRANT OPTION;
 
 ### Create new MySQL DataBase & User ###
 
-[Create DataBase]
+#Create DataBase
 ``
 CREATE DATABASE breakDB;
 ``
