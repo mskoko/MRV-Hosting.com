@@ -5,19 +5,18 @@
 comming soon.
 ``
 
+### Design: Radisic;
+### Panel Frontend: Gari;
+### Backend: Me;
 
 Project for you guys <3
 
-#### Design: Radisic;
-#### Panel Frontend: Gari;
-#### Backend: Me;
-
-
-
+add manual:
 ``
-https://github.com/Austinb/GameQ
-https://github.com/PHPMailer/PHPMailer
-https://github.com/phpseclib/phpseclib
+-> https://github.com/Austinb/GameQ
 
-   -> add manual () /core/inc/libs
+-> https://github.com/PHPMailer/PHPMailer
+-> https://github.com/phpseclib/phpseclib
+
+   -> folder: /core/inc/libs
 ``
