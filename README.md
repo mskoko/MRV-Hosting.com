@@ -5,8 +5,7 @@
 comming soon.
 ``
 
-#### Website Design: `Radisic`;
-#### Panel Frontend: `Gari`;
+#### Design: `Radisic` & `Gari`;
 #### Backend: `ME`;
 
 ADD Manual:
