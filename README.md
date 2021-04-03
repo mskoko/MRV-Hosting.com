@@ -1,9 +1,7 @@
 # MRV-Hosting.com Game Panel [Open Source]
 
 ### About us
-``
-comming soon.
-``
+``uskoro bato, no sikiriki``
 
 #### Design: `Radisic` & `Gari`;
 #### Backend: `ME`;
@@ -16,7 +14,7 @@ comming soon.
 ``core.zip => core``
 
 
-ADD Manual:
+###### ADD MANUAL:
 
 ``https://github.com/Austinb/GameQ``
 
