@@ -22,7 +22,7 @@
 
 ``https://github.com/phpseclib/phpseclib``
 
-folder: ``/core/inc/libs``
+###### in folder: ``/core/inc/libs``
 
 
 Project for you guys <3
