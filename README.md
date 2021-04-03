@@ -11,19 +11,12 @@ comming soon.
 
 Project for you guys <3
 
-Manual add:
-``
-   https://github.com/Austinb/GameQ
-``
+Manual:
+
+``> https://github.com/Austinb/GameQ
+|
+https://github.com/PHPMailer/PHPMailer
+|
+https://github.com/phpseclib/phpseclib``
 -
-``
-   https://github.com/PHPMailer/PHPMailer
-``
--
-``
-   https://github.com/phpseclib/phpseclib
-``
--
-``
-   folder: /core/inc/libs
-``
+``folder: /core/inc/libs``
