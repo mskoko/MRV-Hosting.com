@@ -1,7 +1,7 @@
 <?php
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- *   file                 :  index.php
+ *   file                 :  game.php
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *   author               :  Muhamed Skoko - mskoko.me@gmail.com
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
@@ -15,6 +15,19 @@ if (!($Admin->IsLoged()) == true) {
     header('Location: /admin/login');
     die();
 }
+
+$gameID = $GET['id'];
+
+if(!(isset($gameID) || is_numeric($gameID))) {
+    die('Molimo upisite ID Moda');
+}
+
+/*// If not permission die me
+if(!($Admin->AdminPermValid($Admin->AdminData()['id'], '1')) == true) {
+	$Alert->SaveAlert('You have no acces.', 'error');
+	header('Location: /admin/');
+	die();
+}*/
 
 ?>
 <!DOCTYPE html>
@@ -69,71 +82,53 @@ if (!($Admin->IsLoged()) == true) {
 		<div class="page-content">
 			<div class="page-header">
 				<div class="container-fluid">
-					<h2 class="h5 no-margin-bottom">Dashboard</h2>
+					<h2 class="h5 no-margin-bottom">Edit Game</h2>
 				</div>
 			</div>
 			<section class="no-padding-top no-padding-bottom">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-3 col-sm-6">
-							<div class="statistic-block block">
-								<div class="progress-details d-flex align-items-end justify-content-between">
-									<div class="title">
-										<div class="icon"><i class="fa fa-gamepad"></i></div><strong>Servers</strong>
+						<div class="col-lg-12">
+							<div class="block">
+							<div class="block-body">
+                            <form class="form-horizontal" method="POST" autocomplete="off" action="/admin/process?editGame">
+                                <input hidden name="gameID" value="<?php echo $Secure->SecureTxt($GET['id']); ?>">
+								<div class="form-group row">
+									<label class="col-sm-3 form-control-label">Name</label>
+									<div class="col-sm-9">
+										<input type="text" name="gameName" class="form-control" value="<?php echo $Secure->SecureTxt($Games->gameByID($gameID)['Name']); ?>" required="">
 									</div>
-									<div class="number dashtext-1"><?php echo $Site->ServersCount()['Count']; ?></div>
-								</div>
-								<div class="progress progress-template">
-									<div role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-1"></div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6">
-							<div class="statistic-block block">
-								<div class="progress-details d-flex align-items-end justify-content-between">
-									<div class="title">
-										<div class="icon"><i class="icon-user-1"></i></div><strong>Clients</strong>
+								</div> <div class="line"></div>
+								<div class="form-group row">
+									<label class="col-sm-3 form-control-label">Small Name</label>
+									<div class="col-sm-9">
+										<input type="text" name="gameSmName" class="form-control" value="<?php echo $Secure->SecureTxt($Games->gameByID($gameID)['smName']); ?>" required="">
 									</div>
-									<div class="number dashtext-2"><?php echo $Site->UsersCount()['Count']; ?></div>
-								</div>
-								<div class="progress progress-template">
-									<div role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-2"></div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6">
-							<div class="statistic-block block">
-								<div class="progress-details d-flex align-items-end justify-content-between">
-									<div class="title">
-										<div class="icon"><i class="fa fa-server"></i></div><strong>Boxes</strong>
+								</div> <div class="line"></div>
+								<div class="form-group row">
+									<label class="col-sm-3 form-control-label">Icon</label>
+									<div class="col-sm-9">
+										<input type="text" name="gameIcon" class="form-control" value="<?php echo $Secure->SecureTxt($Games->gameByID($gameID)['Icon']); ?>" required="">
 									</div>
-									<div class="number dashtext-2"><?php echo $Site->BoxesCount()['Count']; ?></div>
-								</div>
-								<div class="progress progress-template">
-									<div role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-2"></div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6">
-							<div class="statistic-block block">
-								<div class="progress-details d-flex align-items-end justify-content-between">
-									<div class="title">
-										<div class="icon"><i class="fa fa-comments"></i></div><strong>Tickets</strong>
+								</div> <div class="line"></div>
+								<div class="form-group row">
+									<label class="col-sm-3 form-control-label">Avatar</label>
+									<div class="col-sm-9">
+										<input type="text" name="gameAvatar" class="form-control" value="<?php echo $Secure->SecureTxt($Games->gameByID($gameID)['bg_img']); ?>" required="">
 									</div>
-									<div class="number dashtext-2"><?php echo $Site->TicketsCount()['Count']; ?></div>
+								</div> <div class="line"></div>
+								<div class="form-group row">
+									<div class="col-sm-9 ml-auto">
+										<button type="submit" class="btn btn-primary" style="float:right;"><i class="fa fa-save"></i> Save</button>
+									</div>
 								</div>
-								<div class="progress progress-template">
-									<div role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-2"></div>
-								</div>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>
 			</section>
 		</div>
-
 	</div>
-
 
     <!--[FOOTER]-->
     <?php include_once($_SERVER['DOCUMENT_ROOT'].'/admin/public/footer.php'); ?>
