@@ -81,5 +81,7 @@ config file: ``/core/inc/config.php``
 using this command line: ``sudo chmod -R 777 /var/www``
 
 
+### [game]
+``https://linuxgsm.com/lgsm/sampserver/``
 
 ## Project for you guys, thanks for your time. <3
