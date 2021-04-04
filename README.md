@@ -3,7 +3,7 @@
 ### About us
 ``uskoro bato, no sikiriki``
 
-#### Design: `Radisic` & `Gari`;
+#### Frontend: `Radisic` & `Gari`;
 #### Backend: `ME`;
 
 
