@@ -36,8 +36,7 @@ if (!($User->IsLoged()) == true) {
             <h1>My server<?php ($Servers->serversByUser($User->UserData()['id'])['Count'] > 1) ? $s='s' : $s=''; echo @$s; ?></h1>
             <div class="row justify-content-center">
                 <?php foreach ($Servers->serversByUser($User->UserData()['id'])['Response'] as $k => $v) { ?>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-4">
-                        <!-- onclick="document.location.href = '/server?id=<?php echo $v['id']; ?>'" -->
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-4" onclick="document.location.href = '/server?id=<?php echo $v['id']; ?>'">
                         <div class="card">
                             <div class="card-body srv_card_" style="background:url('<?php echo $Games->gameByID($v['gameID'])['bg_img']; ?>') no-repeat center center;">
                                 <?php if($v['Status'] !== '1') { $b='background:red;'; } else { $b=''; } ?>
