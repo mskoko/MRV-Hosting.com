@@ -8,41 +8,11 @@ RewriteRule ^home$ 								"index.php"
 #####Login page
 RewriteRule ^login$ 							"login.php"
 
-#####Register page
-RewriteRule ^register$ 							"register.php"
-
 #####Logout page
 RewriteRule ^logout$ 							"logout.php"
 
-#####GP~Home page
-RewriteRule ^gp-home$ 							"gp-home.php"
-
-#####Billing page
-RewriteRule ^billing$ 							"billing.php"
-
-#####Order page
-RewriteRule ^order$ 							"order.php"
-
-#####New Order page
-RewriteRule ^neworder$ 							"neworder.php"
-
-#####Order page
-RewriteRule ^order$ 							"order.php"
-
-#####Install server page
-RewriteRule ^install$ 							"install.php"
-
 #####Servers page
 RewriteRule ^servers$ 							"servers.php"
-
-#####Server page
-RewriteRule ^server$ 							"server.php"
-
-#####Online Stats Server page
-RewriteRule ^online$ 							"online.php"
-
-#####Settings Server page
-RewriteRule ^settings$ 							"settings.php"
 
 #####Support page
 RewriteRule ^support$ 							"support.php"
@@ -50,38 +20,89 @@ RewriteRule ^support$ 							"support.php"
 #####Ticket page
 RewriteRule ^ticket$ 							"ticket.php"
 
-#####Admins Server page
-RewriteRule ^admins$ 							"admins.php"
+#####Boxes page
+RewriteRule ^boxes$ 							"boxes.php"
 
-#####WebFTP Server page
-RewriteRule ^web_ftp$ 							"web_ftp.php"
+#####New server
+RewriteRule ^add_server$ 						"add_server.php"
 
-#####Mods Server page
-RewriteRule ^mods$ 								"mods.php"
+#####New Admin
+RewriteRule ^add_admin$ 						"add_admin.php"
 
-#####Plugins Server page
-RewriteRule ^plugins$ 							"plugins.php"
+#####New User
+RewriteRule ^add_user$ 				    		"add_user.php"
 
-#####Console Server page
+#####Server page
+RewriteRule ^server$ 							"server.php"
+
+#####FDL Info page
+RewriteRule ^fdl_view$ 							"fdl_view.php"
+
+#####Server Mods page
+RewriteRule ^smods$ 							"smods.php"
+
+#####Server Plugins page
+RewriteRule ^splugins$ 							"splugins.php"
+
+#####Server Maps page
+RewriteRule ^smaps$ 							"smaps.php"
+
+#####Settings page
+RewriteRule ^settings$ 							"settings.php"
+
+#####WebFTP page
+RewriteRule ^web_ftp$ 							"webftp.php"
+
+#####Console page
 RewriteRule ^console$ 							"console.php"
 
-#####MySQL Server page
-RewriteRule ^mysql$ 							"mysql.php"
+#####Orders page
+RewriteRule ^orders$ 							"orders.php"
 
-#####Autorestart
-RewriteRule ^autorestart$ 						"autorestart.php"
+#####Order page
+RewriteRule ^order$ 							"order.php"
 
-#####Advertisements
-RewriteRule ^advertisements$ 					"advertisements.php"
+#####Box page
+RewriteRule ^box$    							"box.php"
 
-#####Contact
-RewriteRule ^contact$ 					        "contact.php"
+#####New Box
+RewriteRule ^add_box$ 							"add_box.php"
 
-#####QnA
-RewriteRule ^qna$ 					            "qna.php"
+#####Games page
+RewriteRule ^games$    							"games.php"
 
-#####Profile
-RewriteRule ^profile$ 					        "profile.php"
+#####New Game
+RewriteRule ^add_game$ 							"add_game.php"
+
+#####Game
+RewriteRule ^game$ 							    "game.php"
+
+#####Plugins page
+RewriteRule ^plugins$    						"plugins.php"
+
+#####New Plugin
+RewriteRule ^add_plugin$ 						"add_plugin.php"
+
+#####Plugin
+RewriteRule ^plugin$ 							"plugin.php"
+
+#####Mods page
+RewriteRule ^mods$    							"mods.php"
+
+#####New Mod
+RewriteRule ^add_mod$ 							"add_mod.php"
+
+#####Mod
+RewriteRule ^mod$ 							    "mod.php"
+
+#####User page
+RewriteRule ^user$    							"user.php"
+
+#####Users page
+RewriteRule ^users$    							"users.php"
+
+#####Admins
+RewriteRule ^admins$ 							"admins.php"
 
 #####Process
 RewriteRule ^process$ 							"process.php"
@@ -93,11 +114,3 @@ ErrorDocument 401     							"/error.php?err=401"
 ErrorDocument 403     							"/error.php?err=403"
 ErrorDocument 404     							"/error.php?err=404"
 ErrorDocument 500     							"/error.php?err=500"
-
-#####Anti Leak
-RewriteCond %{HTTP_USER_AGENT} ^HTTrack [OR]
-RewriteCond %{HTTP_USER_AGENT} ^SiteSucker [OR]
-RewriteCond %{HTTP_USER_AGENT} ^WebZip [OR]
-RewriteCond %{HTTP_USER_AGENT} ^WebCopier [OR]
-RewriteCond %{HTTP_USER_AGENT} ^Zeus
-RewriteRule ^.*$ no_download.html [L]
