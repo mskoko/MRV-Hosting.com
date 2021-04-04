@@ -59,7 +59,7 @@ more: ``https://www.hostinger.com/tutorials/how-to-install-and-use-linux-screen/
 ``Wherever you have a zipped file, unzip it to a folder that should be called as a zip.``
 
 #### User panel:
-``unzip core.zip``
+``unzip core/inc/libs/libs.zip``
 
 ``unzip assets/fontawesome.zip``
 
@@ -73,10 +73,12 @@ more: ``https://www.hostinger.com/tutorials/how-to-install-and-use-linux-screen/
 ``unzip admin/vendor.zip``
 
 
-###### in folder: ``/core/inc/config.php -> change db``
+### [database config]
+config file: ``/core/inc/config.php``
 
-### fix upload (permission):
-	``sudo chmod -R 777 /var/www``
+
+### [upload problem fix]
+using this command line: ``sudo chmod -R 777 /var/www``
 
 
 
