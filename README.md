@@ -1,4 +1,4 @@
-# MRV-Hosting.com Game Panel [Open Source]
+# MRV-Hosting.com Site, Order, Payment, Game control panel [Open Source]
 
 ### About us
 ``uskoro bato, no sikiriki``
@@ -83,5 +83,8 @@ using this command line: ``sudo chmod -R 777 /var/www``
 
 ### [game]
 ``https://linuxgsm.com/lgsm/sampserver/``
+
+
+## You developer? Please fork & fix bugs. <3
 
 ## Project for you guys, thanks for your time. <3
