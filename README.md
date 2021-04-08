@@ -4,4 +4,4 @@
 ### GO TO: https://github.com/mrv-gamepanel - For full installation
 
 
-# Video tut: https://youtu.be/pHhaKXwo918
+# Video tutorial: https://youtu.be/pHhaKXwo918
